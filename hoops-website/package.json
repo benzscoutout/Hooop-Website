@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy:test": "ng build && firebase use hooops-site && firebase target:clear hosting hooops-test && firebase target:apply hosting hooops-test hooops-test && firebase deploy --only hosting:hooops-test",
+    "deploy:prod": "ng build --prod && firebase use hooops-site && firebase target:clear hosting hooops-site && firebase target:apply hosting hooops-site hooops-site && firebase deploy --only hosting:hooops-site"
+    
   },
   "private": true,
   "dependencies": {

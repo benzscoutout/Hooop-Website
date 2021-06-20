@@ -195,6 +195,8 @@ app-home {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 500px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 
 
 
@@ -262,6 +264,15 @@ app-home {
               height: auto;
               object-fit: contain;
             }
+
+            .text-desc{
+              padding-top: 30px;
+              padding-bottom: 30px;
+              font-size: 24px;
+              text-align: center;
+              font-family: "Medium";
+              color: black;
+            }
           }
         }
       }
@@ -286,7 +297,7 @@ app-home {
   }
 
   .section-3-control {
-
+    padding: 30px 0 30px 0;
     background-color: $secondary-color;
     min-height: 500px;
     padding-bottom: 80px;
@@ -307,7 +318,7 @@ app-home {
     .grid-control {
       width: 70%;
       display: grid;
-      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-columns: 50% 50% ;
 
       .grid-column-control {
         margin-left: auto;
@@ -321,7 +332,7 @@ app-home {
         }
 
         .desc-text {
-          margin-top: 30px;
+          margin-top: 10px;
           font-size: 100px;
           color: white;
         }
