@@ -1,7 +1,11 @@
 {
   "targets": {
     "hooops-site": {
-      "hosting": {}
+      "hosting": {
+        "hooops-test": [
+          "hooops-test"
+        ]
+      }
     }
   }
 }
