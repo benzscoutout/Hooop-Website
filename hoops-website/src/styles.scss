@@ -1,0 +1,45 @@
+
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "config";
+
+
+
+@font-face {
+  font-family: "Bold";
+  src: url(./assets/fonts/Bold.ttf);
+  font-weight: bold;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Medium";
+  src: url(./assets/fonts/Medium.ttf);
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(./assets/fonts/Regular.ttf);
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+html,
+body {
+  font-family: "Regular" !important;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 !important;
+}
+
+.container-control{
+    padding-left: 5%;
+    padding-right: 5%;
+}

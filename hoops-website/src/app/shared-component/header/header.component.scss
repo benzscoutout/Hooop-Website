@@ -1,0 +1,217 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "../../../config.scss";
+
+app-header {
+  .menu-side-control {
+    position: fixed;
+    z-index: 2000;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    width: 100% !important;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .mat-menu-item {
+    text-decoration: none !important;
+    font-family: "SemiBold" !important;
+  }
+
+  .mat-menu-panel {
+    background-color: black;
+    max-width: initial !important;
+  }
+
+  .dropdown-img {
+    margin-left: 8px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .menu-open-control {
+
+    width: 90%;
+    background-color: white;
+    float: right;
+
+  }
+
+  .menu-open-header-control {
+    height: 56px;
+    border-bottom-color: #eeeeee;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+
+  .button-list-control {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .cdk-overlay-pane {
+    width: 100%;
+  }
+
+  .direction-mobile {
+    margin-right: auto;
+
+    @include media-breakpoint-down(md) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  
+
+  
+
+  .menu-control-padding {
+    height: 100% !important;
+    margin-left: 35px;
+    margin-right: 35px;
+
+    @include media-breakpoint-down(xl) {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  
+
+  .mat-menu-panel {
+    background-color: black;
+    max-width: initial !important;
+  }
+
+  .dropdown-img {
+    margin-left: 8px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .menu-text {
+    font-size: 34px;
+    font-family: "Bold";
+    color: $secondary-color;
+
+    
+  }
+
+  .menu-sub-text {
+    font-size: 13px !important;
+    font-family: "SemiBold" !important;
+    color: $text-black !important;
+  }
+
+  .hooops-logo {
+    cursor: pointer;
+    width: 197px;
+    height: auto;
+
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+
+  .menu-height-control {
+    height: 80px !important;
+  }
+
+  .menu-height-collpase-control {
+    height: 100% !important;
+  }
+
+  .bg-header {
+    min-height: 100px;
+    z-index: 100;
+    background: #f3f3f3;
+    box-shadow: 0px 0px 3px !important;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0) 100%)
+  .menu-control {
+    margin-left: auto;
+  }
+
+  .height-nav-bar {
+      width: 100%;
+    left: 0;
+    right: 0;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    @include media-breakpoint-down(xl) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  .bg-active-menu {
+    height: 100% !important;
+    background: white;
+  }
+
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0) 100%)
+
+  .margin-menu-item {
+    margin-top: 0px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 30px;
+    }
+  }
+
+  .menu-item {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+
+  .dropdown-arrow {
+    width: 15px;
+    height: 11px;
+    object-fit: contain;
+    float: right;
+    margin-right: 5px;
+  }
+
+
+  .text-mobile {
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+ 
+
+  .navigation-left-link,
+  .navigation-right-link {
+    color: $secondary-color;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 15px;
+    margin-left: 32px;
+
+    &:hover {
+      color: $secondary-color;
+      text-decoration: none;
+    }
+  }
+}

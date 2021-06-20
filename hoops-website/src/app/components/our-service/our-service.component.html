@@ -1,0 +1,144 @@
+<app-header></app-header>
+<div class="container-fluid bg-control">
+  <div class="container d-flex flex-column  section-1-control">
+
+    <div class="d-inline-flex">
+      <div class="border-header-control">
+        <span class="text-header">DIGITAL TRANSFORMATION SERVICE</span>
+      </div>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="how-we-work-control d-flex">
+        <span class="text-header-white">HOW <span class="text-header-red">WE WORK</span></span>
+      </div>
+    </div>
+  </div>
+  <div class="graphic-control d-flex">
+    <div class="container" style="z-index: 2;">
+      <img src="assets/images/our-service-section-2-img-1.png" class="mx-auto img-graphic">
+
+    </div>
+    <div class="line-gray"></div>
+  </div>
+  <div class="container section-3-control">
+    <div class="main-carousel">
+      <div class="d-inline-flex carousel-cell-control" *ngFor="let img of imgArray">
+        <div class="border-white-control mx-auto d-flex">
+          <div class="border-red-control d-flex">
+            <span class="text-header-white mx-auto">{{img.title}}</span>
+          </div>
+          <span class="text-desc mx-auto">{{img.desc}}</span>
+        </div>
+        <img src="assets/images/arrow-right.png" class="arrow-right my-auto">
+        <div class="contact-control d-flex flex-column">
+          <img src="assets/images/contact-circle.png" class="contact-img my-auto">
+          <span class="mx-auto contact-desc">Contact</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container section-4-control">
+    <span class="text-header-red">OUR <span class="text-header-white">SERVICES</span></span>
+    <div class="grid-control">
+      <img src="assets/images/our-service-section-3-bg.png" class="img-bg-service">
+      <div class=""></div>
+      <div class="grid-right-control d-flex">
+        <img src="assets/images/our-service-section-3-img.png" class="img-grid-right mx-auto my-auto">
+      </div>
+    </div>
+  </div>
+  <div class="container section-5-control">
+    <div class="grid-control">
+      <div class="d-flex mb-auto">
+        <div class="border-left-control d-flex flex-column mx-auto">
+          <img src="assets/images/our-service-section-4-campaign.png" class="img-icon mx-auto">
+          <span class="mx-auto text-desc">Campaign Management</span>
+        </div>
+      </div>
+      <div class="d-flex">
+        <div class="border-right-control mx-auto d-flex">
+          <div class="background-border-right mx-auto">
+            <ng-container *ngFor="let img of counter(4); let i = index;">
+              <img src="assets/images/our-service/campaign/img-{{i+1}}.png" class="img-port my-auto">
+            </ng-container>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-control">
+      <div class="d-flex mb-auto">
+        <div class="border-left-control d-flex flex-column mx-auto">
+          <img src="assets/images/our-service-section-4-graphic-design.png" class="img-icon mx-auto">
+          <span class="mx-auto text-desc">Graphic Design</span>
+        </div>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="border-right-control mx-auto d-flex">
+          <div class="background-border-right mx-auto">
+            <ng-container *ngFor="let img of counter(16); let i = index;">
+              <img src="assets/images/our-service/graphic-design/img-{{i+1}}.png" class="img-port my-auto">
+            </ng-container>
+
+          </div>
+        </div>
+        <div class="border-right-control mx-auto d-flex">
+          <div class="background-border-right mx-auto">
+            <ng-container *ngFor="let img of counter(16); let i = index;">
+              <img src="assets/images/our-service/graphic-design/gif/img-{{i+1}}.gif" class="img-port my-auto">
+            </ng-container>
+
+          </div>
+        </div>
+        <div class="border-right-control mx-auto d-flex">
+
+          <div class="background-border-right mx-auto">
+
+            <ng-container *ngFor="let vdo of jsonVdoGraphic; let i = index;">
+              <a href="https://www.youtube.com/watch?v={{vdo.link}}" target="_blank">
+                <img src="http://img.youtube.com/vi/{{vdo.link}}/mqdefault.jpg" class="img-port my-auto">
+              </a>
+            </ng-container>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-control">
+      <div class="d-flex mb-auto">
+        <div class="border-left-control d-flex flex-column mx-auto">
+          <img src="assets/images/our-service-section-4-production.png" class="img-icon mx-auto">
+          <span class="mx-auto text-desc">Production</span>
+        </div>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="border-right-control mx-auto d-flex">
+          <div class="background-border-right mx-auto">
+            <ng-container *ngFor="let vdo of jsonProductionVdo; let i = index;">
+              <a href="https://www.youtube.com/watch?v={{vdo.link}}" target="_blank">
+                <img src="http://img.youtube.com/vi/{{vdo.link}}/mqdefault.jpg" class="img-port my-auto">
+              </a>
+            </ng-container>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="grid-control">
+      <div class="d-flex mb-auto">
+        <div class="border-left-control d-flex flex-column mx-auto">
+          <img src="assets/images/our-service-section-4-ppc.png" class="img-icon mx-auto">
+          <span class="mx-auto text-desc">PPC Service</span>
+        </div>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="border-right-control mx-auto d-flex">
+          <div class="background-border-right-ppc mx-auto">
+            <img src="assets/images/our-service/ppc/img-1.png" class="mx-auto img-port my-auto">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

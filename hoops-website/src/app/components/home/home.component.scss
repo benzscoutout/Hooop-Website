@@ -1,0 +1,517 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "../../../config";
+
+app-home {
+
+  .bg-default{
+    background-color: $secondary-color;
+  }
+  .carousel-cell{
+    left: 0px !important;
+    right: 0px !important;
+  }
+
+  .bg-header-control {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    background-color: $primary-color;
+    min-height: 1000px;
+
+    .container-control {
+      margin-top: 17%;
+      ;
+    }
+
+    .logo-big-img {
+      width: 60%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .tower-img {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .button-get-start {
+      margin-top: 30px;
+      width: 400px !important;
+      padding: 15px 30px;
+      height: auto;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #707070;
+      border-radius: 59px;
+      opacity: 1;
+      color: $primary-color;
+      font-size: 26px;
+      font-family: "Medium";
+    }
+  }
+
+  .section-1-control {
+    z-index: 1;
+    padding-left: 0px;
+    position: relative;
+    padding-right: 0px;
+
+    .absolute-control {
+      margin-top: 40px;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      right: 0;
+
+      .img-circle-control {
+        width: 343px;
+        height: 343px;
+        border-radius: 171.5px;
+        background-color: white;
+      }
+
+      .img-absolute-control {
+        margin-top: 40px;
+        z-index: 1;
+
+        .img-absolute {
+          width: 98%;
+          height: auto;
+          object-fit: contain;
+        }
+
+      }
+
+
+
+      .header-control {
+        padding: 8px 14px;
+        height: auto;
+        width: auto;
+        text-align: center;
+        background-color: white;
+        border-radius: 28px;
+        z-index: 1;
+
+        .text-header-red {
+          color: $primary-color;
+          font-size: 40px;
+          font-family: "Medium";
+          line-height: 1.5em;
+        }
+
+        .text-header {
+          color: black;
+          font-size: 40px;
+          font-family: "Medium";
+          line-height: 1.5em;
+        }
+      }
+    }
+
+    .section-1-grid-control {
+      display: grid;
+      min-height: 900px;
+
+      grid-template-columns: 50% 50%;
+
+      .section-1-left-control {
+        background-color: $secondary-color;
+        height: 100%;
+        padding-bottom: 15%;
+
+        .img-circle-control {
+          width: 300px;
+          height: 300px;
+          border-radius: 150px;
+          background-color: white;
+        }
+
+        .img-control {
+          width: 98%;
+          height: auto;
+          padding: 4px;
+          object-fit: contain;
+        }
+
+        .text-desc {
+          color: white;
+          font-size: 28px;
+          padding-left: 30px;
+          padding-right: 30px;
+          line-height: 1.5em;
+          text-align: center;
+          font-weight: "Medium";
+          margin-top: 30px;
+        }
+      }
+
+      .section-1-right-control {
+        z-index: 0;
+        padding-bottom: 15%;
+        background: transparent url('../../../assets/images/home-sec-1-bg-right.png') 0% 0% no-repeat padding-box;
+        mix-blend-mode: multiply;
+        height: 100%;
+        opacity: 1;
+
+        .img-circle-control {
+          z-index: 1;
+          width: 300px;
+          height: 300px;
+          border-radius: 150px;
+          background-color: white;
+        }
+
+        .img-control {
+          z-index: 1;
+          width: 98%;
+          height: auto;
+          padding: 4px;
+          object-fit: contain;
+        }
+
+        .text-desc {
+          z-index: 1;
+          color: white;
+          font-size: 28px;
+          padding-left: 30px;
+          padding-right: 30px;
+          line-height: 1.5em;
+          text-align: center;
+          font-weight: "Medium";
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .section-2-control {
+    background-image: url('../../../assets/images/bg-section-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+
+
+
+    .underline {
+      border-bottom-style: solid;
+      border-bottom-width: 3px;
+      border-bottom-color: black;
+      padding-bottom: 16px;
+    }
+
+
+
+    .what-we-do-text {
+
+      .what-text {
+        font-size: $header-menu-size;
+        font-family: "Bold";
+        color: black;
+      }
+
+      .we-do-text {
+        font-size: 140px;
+        color: $primary-color;
+        font-family: "Bold";
+      }
+
+      .grid-control {
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+
+        .grid-column {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+
+          .red-header-control {
+            border-top-left-radius: 10px;
+            background-color: $primary-color;
+            border-top-right-radius: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            padding-bottom: 8px;
+            padding-top: 8px;
+
+            .red-header-text {
+              font-size: 70px;
+              line-height: 60px;
+              color: white;
+              font-family: "Medium";
+            }
+          }
+
+          .white-border-control {
+            background-color: white;
+            border-radius: 10px;
+            min-height: 500px;
+            width: 100%;
+            padding: 18px;
+
+            .img-white-border {
+              border-radius: 18px;
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .text-header-red {
+    font-size: 60px;
+    color: $primary-color;
+    font-family: "Bold";
+  }
+
+  .text-header {
+    font-size: 45px;
+    color: black;
+    font-family: "Medium";
+  }
+
+  .container-control {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .section-3-control {
+
+    background-color: $secondary-color;
+    min-height: 500px;
+    padding-bottom: 80px;
+    width: 100%;
+
+    .text-header-red {
+      font-size: $header-menu-size;
+      color: $primary-color;
+      font-family: "Bold";
+    }
+
+    .text-header-white {
+      font-size: $header-menu-size;
+      color: white;
+      font-family: "Medium";
+    }
+
+    .grid-control {
+      width: 70%;
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+
+      .grid-column-control {
+        margin-left: auto;
+        margin-right: auto;
+
+        .number-text {
+          font-size: 200px;
+          color: white;
+          line-height: 140px;
+          border-bottom: 3px solid white;
+        }
+
+        .desc-text {
+          margin-top: 30px;
+          font-size: 100px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .section-4-control {
+    margin-top: 80px;
+    background-color: $primary-color;
+    min-height: 200px;
+    width: 100%;
+
+    .overlap-control {
+      margin-top: -100px;
+      margin-bottom: -100px;
+    }
+    .container-control{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .carousel-grid-control {
+      display: grid;
+      min-height: 300px;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+
+      .img-control {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .img-customer {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .section-5-control {
+    background-color: $secondary-color;
+    min-height: 300px;
+    padding-top: 100px;
+    width: 100%;
+
+   
+
+    .text-header-red {
+      font-size: $header-menu-size;
+      color: $primary-color;
+      font-family: "Bold";
+    }
+
+    .text-header-white {
+      font-size: $header-menu-size;
+      color: white;
+      font-family: "Medium";
+    }
+
+    .grid-control {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      column-gap: 18px;
+
+      .grid-left-control {
+        display: grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+
+        .item-control {
+          margin-top: 8px;
+          margin-bottom: 16px;
+        }
+
+        .img-grid {
+          width: 90%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .text-desc {
+          color: white;
+          font-size: 20px;
+          font-family: "Medium";
+        }
+      }
+
+      .grid-right-control {}
+    }
+  }
+
+  .section-6-control {
+    background-image: url('../../../assets/images/home-bg-sec-6.png');
+    background-repeat: no-repeat;
+    min-height: 200px;
+
+    .text-header-white {
+      font-size: $header-menu-size;
+      color: white;
+      font-family: "Medium";
+    }
+
+    .grid-control {
+      display: grid;
+      grid-template-columns: 30% 70%;
+
+      .grid-left-control {
+        padding: 24px;
+      }
+
+      .grid-right-control {
+        padding: 24px;
+        .img-right {
+          width: 350px;
+          height: auto;
+          margin-bottom: 40px;
+          object-fit: contain;
+        }
+
+        .grid-border-control{
+         position: relative;
+          .border-control {
+            background: #FFFFFF70 0% 0% no-repeat padding-box;
+            border-radius: 25px;
+            min-height: 200px;
+            padding: 18px 150px 18px 18px;
+            text-align: center;
+
+            .text-desc{
+              font-size: 40px;
+              color: black;
+              font-family: "Medium";
+              line-height: 1.2em;
+            }
+            .img-grid{
+              position: absolute;
+              width: auto;
+              height: 250px;
+              object-fit: contain;
+              right: -50px;
+            }
+          }
+
+         
+        }
+
+       
+      }
+    }
+  }
+
+  .section-7-control{
+    background-color: #F3F3F3;
+    min-height: 400px;
+
+    .container-control{
+      padding-bottom: 100px;
+    }
+   
+    .text-header-red {
+      font-size: $header-menu-size;
+      color: $primary-color;
+      font-family: "Bold";
+    }
+
+    .text-header-secondary {
+      font-size: $header-menu-size;
+      color: $secondary-color;
+      font-family: "Medium";
+    }
+
+    .carousel-grid-control{
+
+      
+      .img-client{
+        width: 170px;
+        height: 170px;
+        object-fit: contain;
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+      }
+    }
+
+  }
+
+  .img-default {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

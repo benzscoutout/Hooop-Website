@@ -1,0 +1,148 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "../../../config";
+
+app-footer {
+
+  .footer-control {
+    padding-top: 200px;
+    background-color: $secondary-color;
+    min-height: 500px;
+    padding-bottom: 80px;
+  }
+
+  .grid-header-control {
+    display: grid;
+    position: relative;
+    grid-template-columns: 50% 50%;
+
+    .grid-left-control {
+      position: relative;
+      height: 150px;
+
+      .border-red-control {
+        width: 100%;
+        position: relative;
+        background-color: $primary-color;
+        padding-left: 30px;
+        border-radius: 10px 10px 10px 10px;
+        height: auto;
+
+        .text-white {
+          font-size: $header-menu-size;
+          color: white;
+          font-family: "Bold";
+        }
+
+      }
+
+      .img-line {
+        cursor: pointer;
+        right: 0;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-right: -100px;
+      }
+    }
+    .img-hooop {
+      margin-left: auto;
+      cursor: pointer;
+      width: auto;
+      height: 90px;
+      object-fit: contain;
+    }
+  }
+
+  .container-control {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .text-header-red {
+    font-size: $header-menu-size;
+    color: $primary-color;
+    font-family: "Bold";
+  }
+
+  .text-header-white {
+    font-size: $header-menu-size;
+    color: white;
+    font-family: "Medium";
+  }
+
+  .grid-control {
+    display: grid;
+    grid-template-columns: 100%;
+
+    .grid-right-control {
+
+      .img-logo {
+        margin-left: 40px;
+        width: 250px;
+        height: 80px;
+        object-fit: contain;
+      }
+      .text-contact-header {
+        margin-top: 40px;
+        font-size: $header-menu-size;
+        color: white;
+        font-family: "Medium";
+      }
+      .text-address {
+        margin-top: 16px;
+        font-size: 36px;
+        color: white;
+        font-family: "Medium";
+      }
+
+      .grid-address-control {
+        margin-left: 40px;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .map {
+          padding-left: 30px;
+          width: auto;
+          height: 300px;
+          object-fit: contain;
+        }
+
+        .img-social {
+          width: 70px;
+          margin-left: 8px;
+          margin-right: 8px;
+          cursor: pointer;
+          height: 70px;
+          object-fit: contain;
+        }
+
+        .text-contact-control {
+
+          display: grid;
+          grid-template-columns: 10% 90%;
+
+          .img-contact {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+          }
+
+          .text-contact {
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+            font-family: "Medium";
+            text-decoration: none;
+          }
+
+        }
+      }
+    }
+  }
+
+}

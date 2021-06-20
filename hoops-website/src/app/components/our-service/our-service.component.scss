@@ -1,0 +1,299 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "../../../config";
+
+app-our-service {
+
+  .bg-control {
+    background-color: $secondary-color;
+    min-height: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .section-1-control {
+    padding-top: 40px;
+    position: relative;
+
+    .border-header-control {
+      background-color: white;
+      border-radius: 18px;
+      height: auto;
+      padding: 15px 20px;
+
+      .text-header {
+        width: auto;
+        font-size: 50px;
+        margin-bottom: 0px !important;
+        font-family: "Bold";
+        color: $secondary-color;
+      }
+    }
+
+    .how-we-work-control {
+      margin-left: auto;
+
+      .text-header-red {
+        font-size: $header-menu-size;
+        color: $primary-color;
+        font-family: "Bold";
+      }
+
+      .text-header-white {
+        font-size: $header-menu-size;
+        color: white;
+        font-family: "Medium";
+      }
+    }
+
+
+  }
+
+  .graphic-control {
+    position: relative;
+    height: 500px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+
+    .img-graphic {
+      z-index: 2;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .line-gray {
+      position: absolute;
+      top: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      bottom: 0;
+      padding-left: 0px;
+      padding-right: 0px;
+      background-color: #ffffff53;
+      width: 100%;
+      height: 143px;
+    }
+
+  }
+
+  .section-3-control {
+    .main-carousel {
+      height: 300px;
+    }
+
+    .carousel-cell-control {
+      margin-top: 70px;
+      width: 100%;
+
+    }
+
+    .border-red-control {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      width: 400px;
+      margin-top: -70px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      background-color: $primary-color;
+      padding: 8px;
+
+
+      .text-header-white {
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        font-family: "Medium";
+      }
+    }
+
+    .border-white-control {
+      position: relative;
+      width: 80%;
+      z-index: 1;
+      border-radius: 10px;
+      background-color: white;
+      padding: 15px;
+
+      .text-desc {
+        margin-top: 15px;
+        font-size: $text-description-size;
+        color: black;
+        text-align: center;
+        line-height: 1.2em;
+        font-family: "Medium";
+      }
+    }
+
+    .arrow-right {
+      width: 27px;
+      height: 54px;
+      object-fit: contain;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    .contact-control {
+      .contact-img {
+        width: 73px;
+        height: 73px;
+        object-fit: contain;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+
+      .contact-desc {
+        font-size: $text-description-size;
+        color: white;
+        text-align: center;
+        line-height: 1.2em;
+        font-family: "Medium";
+      }
+
+    }
+
+  }
+
+  .section-4-control {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .text-header-red {
+      font-size: $header-menu-size;
+      color: $primary-color;
+      font-family: "Bold";
+    }
+
+    .text-header-white {
+      font-size: $header-menu-size;
+      color: white;
+      font-family: "Medium";
+    }
+
+    .grid-control {
+    
+      position: relative;
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      .img-grid-right {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        object-fit: contain;
+      }
+    }
+
+    .img-bg-service {
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      position: absolute;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .section-5-control {
+    .youtube-frame{
+      width: 300px;
+      height: 300px;
+    }
+    .grid-control {
+        margin-top: 16px;
+      display: grid;
+      grid-template-columns: 20% 80%;
+      column-gap: 8px;
+
+      .border-left-control {
+        padding: 16px;
+        width: 100%;
+     
+        margin-top: 8px;
+        border: 4px solid #FFFFFF;
+        border-radius: 14px;
+
+        .img-icon {
+          width: 150px;
+          height: 150px;
+          object-fit: contain;
+        }
+
+        .text-desc {
+          font-size: $text-description-size;
+          color: white;
+          font-family: "Medium";
+        }
+      }
+
+      .border-right-control {
+        width: 100%;
+        margin-top: 8px;
+        min-height: 300px;
+        padding: 16px;
+        border: 4px solid #FFFFFF;
+        border-radius: 14px;
+       
+        .background-border-right{
+            background-color: #EAF2FA;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            border-radius: 14px;
+            padding: 16px;
+            height: 100%;
+            column-gap: 8px;
+            row-gap: 8px;
+
+            .img-port{
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+        .background-border-right-ppc{
+            background-color: #EAF2FA;
+            display: grid;
+            grid-template-columns: 100%;
+            border-radius: 14px;
+            padding: 16px;
+            height: 100%;
+            column-gap: 8px;
+            row-gap: 8px;
+
+            .img-port{
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+      }
+    }
+  }
+
+  .flickity-page-dots {
+    bottom: 0px;
+  }
+
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    margin-top: 30px !important;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+  }
+
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: white;
+  }
+}
