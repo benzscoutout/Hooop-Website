@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as Flickity from 'flickity';
 import { flickityConfig } from 'src/app/config/flickity.config';
+import { GoogleAnalyticsService } from 'src/app/service/google-analytic.service';
 
 @Component({
   selector: 'app-our-service',
@@ -32,7 +33,7 @@ export class OurServiceComponent implements OnInit, AfterViewInit {
     desc: "Never wasted a single penny on doing something. You can always learn from what you have done. Out structured performance report will give you anything your brand want for further improvement. It can also be customized to match your business requirements.",
   }]
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient : HttpClient, private ga: GoogleAnalyticsService) { }
   jsonVdoGraphic;
   jsonProductionVdo;
   counter(i: number) {
@@ -69,5 +70,9 @@ export class OurServiceComponent implements OnInit, AfterViewInit {
     );
 
 
+  }
+
+  clickYoutube(title: string){
+    this.ga.setEvent('Our Service Page', { 'click': 'open youtube : ' + title })
   }
 }

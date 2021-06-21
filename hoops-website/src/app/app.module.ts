@@ -10,6 +10,7 @@ import { FooterComponent } from './shared-component/footer/footer.component';
 import { OurServiceComponent } from './components/our-service/our-service.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HeaderComponent } from './shared-component/header/header.component';
+import { CryptowealthComponent } from './components/cryptowealth/cryptowealth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { HeaderComponent } from './shared-component/header/header.component';
     NotFoundComponent,
     FooterComponent,
     OurServiceComponent,
-    HeaderComponent
+    HeaderComponent,
+    CryptowealthComponent
   ],
   imports: [
     BrowserModule,

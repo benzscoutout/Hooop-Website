@@ -37,7 +37,7 @@
       </div>
     </div>
   </div>
-  <div class="container section-4-control">
+  <div class="container section-4-control" id="our-services">
     <span class="text-header-red">OUR <span class="text-header-white">SERVICES</span></span>
     <div class="grid-control">
       <img src="assets/images/our-service-section-3-bg.png" class="img-bg-service">
@@ -47,8 +47,8 @@
       </div>
     </div>
   </div>
-  <div class="container section-5-control">
-    <div class="grid-control">
+  <div class="container section-5-control" >
+    <div class="grid-control" id="campaign-management">
       <div class="d-flex mb-auto">
         <div class="border-left-control d-flex flex-column mx-auto">
           <img src="assets/images/our-service-section-4-campaign.png" class="img-icon mx-auto">
@@ -66,7 +66,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-control">
+    <div class="grid-control" id="graphic-design">
       <div class="d-flex mb-auto">
         <div class="border-left-control d-flex flex-column mx-auto">
           <img src="assets/images/our-service-section-4-graphic-design.png" class="img-icon mx-auto">
@@ -104,7 +104,7 @@
         </div>
       </div>
     </div>
-    <div class="grid-control">
+    <div class="grid-control" id="production">
       <div class="d-flex mb-auto">
         <div class="border-left-control d-flex flex-column mx-auto">
           <img src="assets/images/our-service-section-4-production.png" class="img-icon mx-auto">
@@ -115,7 +115,7 @@
         <div class="border-right-control mx-auto d-flex">
           <div class="background-border-right mx-auto">
             <ng-container *ngFor="let vdo of jsonProductionVdo; let i = index;">
-              <a href="https://www.youtube.com/watch?v={{vdo.link}}" target="_blank">
+              <a href="https://www.youtube.com/watch?v={{vdo.link}}" (click)="clickYoutube(vdo.title)" target="_blank">
                 <img src="http://img.youtube.com/vi/{{vdo.link}}/mqdefault.jpg" class="img-port my-auto">
               </a>
             </ng-container>
@@ -124,7 +124,7 @@
 
       </div>
     </div>
-    <div class="grid-control">
+    <div class="grid-control"  id="ppc-service">
       <div class="d-flex mb-auto">
         <div class="border-left-control d-flex flex-column mx-auto">
           <img src="assets/images/our-service-section-4-ppc.png" class="img-icon mx-auto">
@@ -139,6 +139,14 @@
         </div>
 
       </div>
+    </div>
+  </div>
+  <div class="seciton-6-control" id="our-clients">
+    <div class="container d-block">
+      <div class="text-control d-inline-block">
+        <span class="text-head-red">OUR <span class="text-head-blue">CLIENTS</span></span>
+      </div>
+      <img src="assets/images/our-service/all-company.png" class="img-all">
     </div>
   </div>
 </div>

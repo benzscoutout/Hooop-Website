@@ -11,7 +11,12 @@ export const environment = {
     storageBucket: "hooops-site.appspot.com",
     messagingSenderId: "141039567258",
     appId: "1:141039567258:web:b6fcd07ec363d4e615fa23",
-    measurementId: "G-C2J121NNY1"
+    measurementId: "G-C2J121NNY1",
+    googleAnalyticsTrackingID: 'G-C2J121NNY1',
+    gTagID: 'GTM-K2BJMXZ'
+  },
+  link: {
+    cryptowealth: 'https://cryptowealththailand.com?utm_source=hooops_website'
   }
 };
 

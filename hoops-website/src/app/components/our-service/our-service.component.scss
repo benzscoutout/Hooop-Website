@@ -203,6 +203,8 @@ app-our-service {
   }
 
   .section-5-control {
+    padding-top: 30px;
+    padding-bottom: 30px;
     .youtube-frame{
       width: 300px;
       height: 300px;
@@ -275,6 +277,36 @@ app-our-service {
             }
         }
       }
+    }
+  }
+
+  .seciton-6-control{
+    background-color: #F3F3F3;
+    min-height: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .text-control{
+      border-bottom-color: $secondary-color;
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+    }
+    .text-head-red{
+      font-size: $header-menu-size;
+      color: $primary-color;
+      font-family: "Bold";
+    }
+
+    .text-head-blue{
+      font-size: $header-menu-size;
+      color: $secondary-color;
+      font-family: "Bold";
+    }
+
+    .img-all{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
   }
 

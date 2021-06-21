@@ -1,0 +1,80 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "../../../config";
+
+app-cryptowealth {
+    .bg-header{
+     
+        background-image: url('../../../assets/images/cryptowealth/bg-crypto.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $secondary-color;
+        min-height: 300px;
+    }
+
+    .container-padding-control{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .text-header-white{
+        color: white;
+        font-size: $header-menu-size;
+        font-family: "Bold";
+    }
+
+    .text-sub-header-white{
+        color: white;
+        font-size: $sub-header;
+        font-family: "Regular";
+    }
+
+    .grid-control{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 30% 50% 20%;
+
+        .img-logo-control{
+
+            width: 283px;
+            height: 283px;
+            border-radius: 141.5px;
+            background-color: white;;
+        }
+
+        .img-logo-crypto{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .text-desc{
+            font-size: 40px;
+            color: white;
+            padding-left: 8px;
+            padding-right: 8px;
+            line-height: 1.2em;
+            font-family: "Regular";
+        }
+
+        .img-icon{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .button-crypto{
+            margin-top: 16px;
+            margin-left: auto;
+            cursor: pointer;
+            background-color: $primary-color;
+            border-radius: 10px;
+            padding: 8px 16px;
+            color: white;
+            font-size: 36px;
+            font-family: "Medium";
+        }
+    }
+}

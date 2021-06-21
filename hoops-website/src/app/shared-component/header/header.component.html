@@ -1,6 +1,6 @@
 <div class="container-fluid bg-header d-flex">
   <div class="d-flex justify-content-center height-nav-bar my-auto" [class.bg-active-menu]="navbarOpen">
-    <nav class="navbar navbar-expand-lg navbar-light w-100 justify-content-between menu-height-control">
+    <nav class="navbar navbar-expand navbar-light w-100 justify-content-between menu-height-control">
 
       <div class="navbar-brand d-flex direction-mobile">
         <div class="align-self-center" (click)="onClickLogo()">
@@ -8,7 +8,7 @@
         </div>
 
       </div>
-      <button class="navbar-toggler d-lg-none d-block" style="border: none;" type="button" (click)="toggleNavbar()"
+      <button class="navbar-toggler d-lg-none d-none" style="border: none;" type="button" (click)="toggleNavbar()"
         role="button" aria-hidden="true">
         <i class="fa fa-bars fa-lg fa-inverse" style="color: black; font-size: 25px;" aria-hidden="true"></i>
       </button>
@@ -33,14 +33,13 @@
             routerLinkActive="text-menu-border" [routerLinkActiveOptions]="{exact: true}">CRYPTOWEALTH</span>
         </button>
 
-        <button mat-button class="btn menu-control-padding menu-text" routerLinkActive="menu-header-active"
+        <!-- <button mat-button class="btn menu-control-padding menu-text" routerLinkActive="menu-header-active"
           [routerLinkActiveOptions]="{exact: true}" routerLink="/licensing" (click)="clickLicensing()"><span
             routerLinkActive="text-menu-border" [routerLinkActiveOptions]="{exact: true}">LICENSING</span>
 
-        </button>
-        <button mat-button class="btn menu-control-padding menu-text" routerLinkActive="menu-header-active"
-          [routerLinkActiveOptions]="{exact: true}" routerLink="/contact-us" (click)="clickContact()"><span
-            routerLinkActive="text-menu-border" [routerLinkActiveOptions]="{exact: true}">CONTACT</span>
+        </button> -->
+        <button mat-button class="btn menu-control-padding menu-text" (click)="clickContact()"><span
+           >CONTACT</span>
 
         </button>
 
@@ -67,14 +66,13 @@
           [routerLinkActiveOptions]="{exact: true}" routerLink="/cryptowealth" (click)="clickCryptoWealth()">CRYPTOWEALTH
         </button>
       </div>
-      <div class="button-list-control">
+      <!-- <div class="button-list-control">
         <button mat-button class="btn menu-control-padding menu-text" routerLinkActive="menu-header-active"
           [routerLinkActiveOptions]="{exact: true}" routerLink="/licesning" (click)="clickLicensing()">LICENSING
         </button>
-      </div>
+      </div> -->
       <div class="button-list-control">
-        <button mat-button class="btn menu-control-padding menu-text" routerLinkActive="menu-header-active"
-          [routerLinkActiveOptions]="{exact: true}" routerLink="/contact-us" (click)="clickContact()">CONTACT
+        <button mat-button class="btn menu-control-padding menu-text" (click)="clickContact()">CONTACT
         </button>
       </div>
     </div>

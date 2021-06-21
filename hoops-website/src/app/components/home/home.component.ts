@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { flickityConfig } from '../../config/flickity.config';
 import * as Flickity from 'flickity';
+import { GoogleAnalyticsService } from 'src/app/service/google-analytic.service';
+import { ViewportScroller } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -10,71 +13,14 @@ import * as Flickity from 'flickity';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   apiLoaded = false;
-  imgArray = [{
-    image: "assets/images/customer/customer-1.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-2.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-3.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-4.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-5.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-6.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-7.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-8.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-9.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-10.png",
-    link: ""
-  },]
-  imgClient = [{
-    image: "assets/images/customer/customer-1.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-2.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-3.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-4.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-5.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-6.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-7.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-8.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-9.png",
-    link: ""
-  }, {
-    image: "assets/images/customer/customer-10.png",
-    link: ""
-  },]
-  constructor() { }
+  jsonOurSuccess;
+  jsonOurClient;
+  constructor(private ga: GoogleAnalyticsService, private scroller: ViewportScroller, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+
+    
+    this.ga.setPageView('Home', 'Landing');
     if (!this.apiLoaded) {
       // This code loads the IFrame Player API code asynchronously, according to the instructions at
       // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
@@ -86,12 +32,33 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const flickityCareer = new Flickity('.main-carousel',
+    this.httpClient.get("assets/json/our-client.json").subscribe(data => {
+      this.jsonOurClient = data;
+      new Flickity('.main-carousel',
       flickityConfig.option
     );
-    const clientCarousel = new Flickity('.client-carousel',
-    flickityConfig.option2
-  );
-    
+    })
+    this.httpClient.get("assets/json/our-success.json").subscribe(data => {
+      this.jsonOurSuccess = data;
+      new Flickity('.client-carousel',
+      flickityConfig.option2
+    );
+    })
+  
+   
+
+  }
+
+  clickYoutube() {
+    this.ga.setEvent('Home Page', { 'click': 'watch youtube' })
+  }
+
+  clickGetStart() {
+    this.ga.setEvent('Home Page', { 'click': 'Get Start' })
+    this.scroller.scrollToAnchor('header');
+  }
+
+  clickArticle(name: string) {
+    this.ga.setEvent('Home Page', { 'click': 'Article ' + name })
   }
 }
