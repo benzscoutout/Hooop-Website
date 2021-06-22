@@ -1,0 +1,88 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "../../../../config";
+
+
+app-article-third{
+
+    .bg-header-control{
+        background-color: $secondary-color;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .img-article{
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        width: 50%;
+        margin-bottom: 16px;
+        height: auto;
+        object-fit: contain;
+
+        @include media-breakpoint-down(md){
+            width: 100%;
+        }
+    }
+
+    .img-verticle{
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        width: auto;
+        margin-bottom: 16px;
+        height: 400px;
+        object-fit: contain;
+
+        @include media-breakpoint-down(md){
+            width: 100%;
+        }
+    }
+    .bg-content-control{
+        background-color: #f4f4f4;
+        margin-top: 30px;
+        border-radius: 14px;
+        margin-bottom: 30px;
+        padding: 25px 36px;
+    }
+
+    .text-header{
+        color: $primary-color;
+        font-size: $header-menu-size;
+        text-align: center;
+        font-family: "Bold";
+    }
+
+    .text-desc-header{
+        font-size: 36px;
+        color: $secondary-color;
+        font-family: "Medium";
+    }
+
+    .text-desc-bold{
+        font-family: "Bold";
+    }
+    .text-desc-bold-italic{
+        font-family: "Bold";
+        font-style: italic;
+    }
+
+    .text-desc{
+        text-indent: 16px;
+        margin-top: 16px;
+        color: $secondary-color;
+        font-size: $text-description-size;
+        line-height: 1.2em;
+        font-family: "Light";
+    }
+    .text-desc-no-indent{
+        margin-top: 16px;
+        color: $secondary-color;
+        font-size: $text-description-size;
+        line-height: 1.2em;
+        font-family: "Light";
+    }
+
+
+}

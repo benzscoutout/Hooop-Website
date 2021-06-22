@@ -4,6 +4,9 @@
       "hosting": {
         "hooops-test": [
           "hooops-test"
+        ],
+        "hooops-site": [
+          "hooops-site"
         ]
       }
     }

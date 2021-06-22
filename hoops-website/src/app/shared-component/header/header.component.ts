@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GoogleAnalyticsService } from 'src/app/service/google-analytic.service';
 
@@ -12,10 +12,11 @@ import { GoogleAnalyticsService } from 'src/app/service/google-analytic.service'
 export class HeaderComponent implements OnInit {
   public navbarOpen = false;
   isShow = true;
+  @Input('pageLink') pageLink = false;
   constructor(private route: Router, private activeroute: ActivatedRoute, private scroller: ViewportScroller, private ga: GoogleAnalyticsService) { }
 
   ngOnInit(): void {
-    
+      console.log(this.route.url)
   }
 
   toggleNavbar() {

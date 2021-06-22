@@ -11,6 +11,9 @@ import { OurServiceComponent } from './components/our-service/our-service.compon
 import { HttpClientModule } from "@angular/common/http";
 import { HeaderComponent } from './shared-component/header/header.component';
 import { CryptowealthComponent } from './components/cryptowealth/cryptowealth.component';
+import { ArticleFirstComponent } from './components/articles/article-first/article-first.component';
+import { ArticleSecondComponent } from './components/articles/article-second/article-second.component';
+import { ArticleThirdComponent } from './components/articles/article-third/article-third.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,10 @@ import { CryptowealthComponent } from './components/cryptowealth/cryptowealth.co
     FooterComponent,
     OurServiceComponent,
     HeaderComponent,
-    CryptowealthComponent
+    CryptowealthComponent,
+    ArticleFirstComponent,
+    ArticleSecondComponent,
+    ArticleThirdComponent
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,14 @@
 }
 
 
+@font-face {
+  font-family: "Light";
+  src: url(./assets/fonts/Light.ttf);
+  font-weight: 300;
+  font-display: swap;
+}
+
+
 html,
 body {
   font-family: "Regular" !important;

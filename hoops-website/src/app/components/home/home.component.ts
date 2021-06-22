@@ -4,6 +4,7 @@ import * as Flickity from 'flickity';
 import { GoogleAnalyticsService } from 'src/app/service/google-analytic.service';
 import { ViewportScroller } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   apiLoaded = false;
   jsonOurSuccess;
   jsonOurClient;
-  constructor(private ga: GoogleAnalyticsService, private scroller: ViewportScroller, private httpClient: HttpClient) { }
+  constructor(private ga: GoogleAnalyticsService, private scroller: ViewportScroller, private httpClient: HttpClient, private route: Router) { }
 
   ngOnInit(): void {
 
@@ -58,7 +59,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.scroller.scrollToAnchor('header');
   }
 
-  clickArticle(name: string) {
+  clickArticle(name: string, link: string) {
+    this.route.navigate([link]);
     this.ga.setEvent('Home Page', { 'click': 'Article ' + name })
   }
 }
