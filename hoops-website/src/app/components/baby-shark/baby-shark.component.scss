@@ -1,0 +1,162 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "../../../config";
+
+app-baby-shark {
+
+  .bg-container {
+    background-color: #01d1ff;
+  }
+
+  .section-1-control {
+    padding-left: 0px;
+    padding-right: 0px;
+
+    .section-1-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .section-2-control {
+    position: relative;
+    min-height: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background: url('../../../assets/images/baby-shark/section-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+
+    .text-bg-control {
+      background-color: white;
+      height: 80px;
+      margin-top: -15px;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 500px;
+      min-width: 200px;
+      border-top-right-radius: 22px;
+      border-bottom-right-radius: 22px;
+    }
+
+    .img-2 {
+      width: 80%;
+      height: auto;
+      margin-top: 20px;
+      object-fit: contain;
+    }
+
+    .text-size {
+      font-size: 50px;
+      font-family: "Regular";
+    }
+
+    .stat-control {
+      display: grid;
+      grid-template-columns: 60% 40%;
+    }
+
+    .number-control {
+      background-color: #003D7C;
+      border-radius: 8px;
+      min-height: 400px;
+      width: 80%;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+
+      .number-1-control {
+        margin: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background-color: white;
+        padding: 16px;
+
+        .number-header {
+          font-size: 40px;
+          font-family: "Bold";
+          color: $pink-shark;
+        }
+
+        .number-desc {
+          font-size: 28px;
+          font-family: "Regular";
+          color: $text-black;
+          margin-top: -20px;
+        }
+
+        .grid-row-1-control {
+          display: grid;
+          grid-template-columns: 50% 50%;
+          position: relative;
+
+          .right-control {
+            padding-bottom: 16px;
+            padding-top: 16px;
+            position: relative;
+          }
+
+          .border-right {
+            position: absolute;
+            width: 0.5px;
+            right: 0;
+            opacity: 0.4;
+            margin-top: auto;
+            margin-bottom: auto;
+            top: 0;
+            margin-left: auto;
+            height: 90%;
+            bottom: 0;
+            background-color: #707070;
+          }
+
+          .border-bottom {
+            position: absolute;
+            width: 90%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            height: 1px;
+            bottom: 0;
+            background-color: #707070;
+          }
+
+
+          .left-control {
+            padding-bottom: 16px;
+            padding-top: 16px;
+            position: relative;
+
+          }
+
+        }
+
+        .button-pinkfong {
+          background: #003C7D 0% 0% no-repeat padding-box;
+          border-radius: 10px;
+          border-color: #003C7D;
+          border-style: none;
+          padding: 4px 16px;
+          color: white;
+          font-family: "Bold";
+          font-size: 20px;
+        }
+
+        .text-pinkfong{
+          color: #003C7D;
+          font-size: 18px;
+          font-family: "Bold";
+        }
+
+
+      }
+
+    }
+  }
+}

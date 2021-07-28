@@ -14,6 +14,7 @@ import { CryptowealthComponent } from './components/cryptowealth/cryptowealth.co
 import { ArticleFirstComponent } from './components/articles/article-first/article-first.component';
 import { ArticleSecondComponent } from './components/articles/article-second/article-second.component';
 import { ArticleThirdComponent } from './components/articles/article-third/article-third.component';
+import { BabySharkComponent } from './components/baby-shark/baby-shark.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { ArticleThirdComponent } from './components/articles/article-third/artic
     CryptowealthComponent,
     ArticleFirstComponent,
     ArticleSecondComponent,
-    ArticleThirdComponent
+    ArticleThirdComponent,
+    BabySharkComponent
   ],
   imports: [
     BrowserModule,

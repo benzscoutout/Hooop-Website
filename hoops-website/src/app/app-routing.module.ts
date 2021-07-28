@@ -1,3 +1,4 @@
+import { BabySharkComponent } from './components/baby-shark/baby-shark.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArticleFirstComponent } from './components/articles/article-first/article-first.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'our-service', pathMatch: 'full', component: OurServiceComponent },
   { path: 'cryptowealth', pathMatch: 'full', component: CryptowealthComponent },
+  { path: 'baby-shark', pathMatch: 'full', component: BabySharkComponent },
   { path: 'articles/ธุรกิจสีดอกเลา', pathMatch: 'full', component: ArticleFirstComponent },
   { path: 'articles/5-jobboards', pathMatch: 'full', component: ArticleSecondComponent },
   { path: 'articles/audience-insights', pathMatch: 'full', component: ArticleThirdComponent },
