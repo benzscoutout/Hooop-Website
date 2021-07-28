@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { GoogleAnalyticsService } from 'src/app/service/google-analytic.service';
 
 @Component({
   selector: 'app-baby-shark',
@@ -8,9 +9,49 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class BabySharkComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ga: GoogleAnalyticsService) { }
 
   ngOnInit(): void {
+  }
+
+  clickYoutube(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto Youtube Right' })
+    window.open("https://www.youtube.com/c/pinkfong/featured", '_blank');
+  }
+
+  clickFacebook(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto Facebook Page' })
+    window.open("https://www.facebook.com/Pinkfong.BabyShark.TH", '_blank');
+  }
+
+  clickWebsite(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto Website' })
+    window.open("https://www.pinkfong.com/en/", '_blank');
+  }
+
+  clickVDOYoutube(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto VDO YOUTUBE' })
+    window.open("https://youtu.be/XqZsoesa55w", '_blank');
+  }
+
+  clickYoutubeInter(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto Youtube channel Inter' })
+    window.open("https://www.youtube.com/c/pinkfong/featured", '_blank');
+  }
+
+  clickYoutubeThailand(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto Youtube Channel Thailand' })
+    window.open("https://www.youtube.com/c/PinkfongTHA/featured", '_blank');
+  }
+
+  clickMashita(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto Masita Website' })
+    window.open("https://www.facebook.com/MasitaSeaweed/", '_blank');
+  }
+
+  clickGQ(){
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto GQ Website' })
+    window.open("https://gqsize.com/", '_blank');
   }
 
 }

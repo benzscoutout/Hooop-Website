@@ -8,6 +8,8 @@ app-baby-shark {
 
   .bg-container {
     background-color: #01d1ff;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .section-1-control {
@@ -148,7 +150,7 @@ app-baby-shark {
           font-size: 20px;
         }
 
-        .text-pinkfong{
+        .text-pinkfong {
           color: #003C7D;
           font-size: 18px;
           font-family: "Bold";
@@ -157,6 +159,111 @@ app-baby-shark {
 
       }
 
+      .number-2-control {
+        margin: 4px 8px;
+        position: relative;
+        background-color: white;
+        padding: 16px;
+
+        .img-youtube {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+
+      }
+
+      .number-3-control {
+        margin: 4px 8px;
+        position: relative;
+        padding: 16px 16px;
+
+        .youtube-left-img {
+          width: auto;
+          height: 50px;
+          object-fit: contain;
+          margin-right: 8px;
+        }
+
+        .youtube-right-img {
+          width: auto;
+          height: 50px;
+          object-fit: contain;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .channel-control {
+      position: relative;
+
+      .img-youtube {
+        cursor: pointer;
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+        margin-left: auto;
+      }
+
+      .img-facebook {
+        cursor: pointer;
+        width: 80%;
+        height: auto;
+        margin-top: 16px;
+        object-fit: contain;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .section-3-control {
+    width: 100%;
+    background-color: white;
+    padding: 20px 0px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    .text-collaboration {
+      font-size: 60px;
+      color: $text-black;
+      font-family: "Bold";
+    }
+
+    .logo-grid-control {
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      .border-control {
+        border-radius: 13px;
+        border: 3px solid #707070;
+        width: 90%;
+        height: 200px;
+        margin-top: auto;
+        margin-bottom: auto;
+        min-height: 120px;
+
+
+
+        .img-logo {
+          width: auto;
+          height: 150px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .button-be-partnership {
+      margin-top: -16px;
+      margin-bottom: 30px;
+      background: #B01F24;
+      border: 1px solid #707070;
+      border-radius: 23px;
+      border-style: none;
+      padding: 4px 36px;
+      color: white;
+      font-family: "Bold";
+      font-size: 36px;
     }
   }
 }

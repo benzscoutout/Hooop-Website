@@ -1,11 +1,11 @@
 <app-header id="header"></app-header>
 <div class="container-fluid bg-container">
 
-  <div class="container section-1-control">
+  <div class="section-1-control">
     <img src="assets/images/baby-shark/section-1.png" class="section-1-img">
 
   </div>
-  <div class="container section-2-control d-flex flex-column">
+  <div class="section-2-control d-flex flex-column">
     <div class="text-bg-control">
 
       <div class="text-size">
@@ -40,7 +40,7 @@
               <span class="number-header mx-auto">340,107,169</span>
               <span class="number-desc mx-auto">App Downloads</span>
               <div class="border-right"></div>
-             
+
             </div>
             <div class="right-control d-flex flex-column">
 
@@ -48,12 +48,50 @@
               <span class="number-desc mx-auto">YouTube Views</span>
             </div>
           </div>
-          <button class="mx-auto button-pinkfong">Pinkfong Baby Shark’s Official Website</button>
+          <button class="mx-auto button-pinkfong" (click)="clickWebsite()">Pinkfong Baby Shark’s Official
+            Website</button>
           <span class="mx-auto text-pinkfong">*data as of 21/07/15</span>
         </div>
+        <div class="d-flex number-2-control">
+          <img src="assets/images/baby-shark/youtube-section.png" class="img-youtube" (click)="clickVDOYoutube()">
+        </div>
+
+        <div class="d-flex justify-content-center number-3-control">
+          <img src="assets/images/baby-shark/left-youtube.png" class="youtube-left-img" (click)="clickYoutubeInter()">
+          <img src="assets/images/baby-shark/right-youtube.png" class="youtube-right-img"
+            (click)="clickYoutubeThailand()">
+        </div>
+      </div>
+
+      <div class="channel-control d-flex flex-column">
+
+        <img src="assets/images/baby-shark/youtube-baby-shark.png" class="img-youtube" (click)="clickYoutube()">
+        <img src="assets/images/baby-shark/facebook-baby-shark.png" class="img-facebook" (click)="clickFacebook()">
       </div>
     </div>
 
+  </div>
+  <div class="section-3-control">
+    <div class="d-flex mx-auto">
+      <span class="my-auto text-collaboration">Collaboration</span>
+
+    </div>
+    <div class="d-flex flex-column">
+
+
+      <div class="logo-grid-control my-auto">
+
+        <div class="border-control d-flex">
+          <img src="assets/images/baby-shark/logo_GQ.png" class="img-logo my-auto mx-auto" (click)="clickGQ()">
+        </div>
+
+        <div class="border-control d-flex">
+          <img src="assets/images/baby-shark/logo_masita.png" class="img-logo my-auto mx-auto" (click)="clickMashita()">
+
+        </div>
+      </div>
+      <button class="mx-auto button-be-partnership">Be a partnership</button>
+    </div>
   </div>
 
 

@@ -2,11 +2,11 @@
   "targets": {
     "hooops-site": {
       "hosting": {
-        "hooops-test": [
-          "hooops-test"
-        ],
         "hooops-site": [
           "hooops-site"
+        ],
+        "hooops-test": [
+          "hooops-test"
         ]
       }
     }
