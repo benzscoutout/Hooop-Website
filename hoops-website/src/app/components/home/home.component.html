@@ -1,4 +1,4 @@
-<div class="container-fluid bg-header-control d-flex">
+<div class="container-fluid bg-header-control d-none d-lg-flex">
   <img src="assets/images/tower.png" class="tower-img">
   <div class="container d-flex mx-auto container-control flex-column">
     <img src="assets/images/logo-white-big.png" class="logo-big-img mx-auto">
@@ -7,31 +7,29 @@
 
 </div>
 <app-header id="header" [pageLink]="false"></app-header>
-<div class="container-fluid bg-default"  >
-  <div class="container section-1-control" id="section1">
+<div class="container-fluid bg-default">
+  <div class="section-1-control d-none d-md-flex" id="section1">
     <div class="absolute-control d-flex flex-column">
       <div class="header-control">
-        <span class="text-header-red">
-          HOOOP <span class="text-header">is a boutique digital / consulting agency that provides strategic marketing
-            solution to any given digital
-            problem, utilising all creative means to drive success</span>
+        <span class="text-header-red" [innerHtml]="'HOME.section_1_1' | translate">
         </span>
       </div>
-      <div class="img-circle-control img-absolute-control mx-auto d-flex">
+      <div class="img-circle-control img-absolute-control mx-auto d-flex flex-column">
         <img src="assets/images/home-sec-1-absolute-img.png" class="mx-auto my-auto img-absolute">
+        <button class="button-view-more mx-auto" (click)="clickMoreCreative()">View more</button>
       </div>
     </div>
     <div class="section-1-grid-control">
+      <img src="assets/images/bg_home2.png" class="img-bg">
       <div class="section-1-left-control d-flex">
         <div class="mt-auto d-flex flex-column mx-auto">
           <div class="img-circle-control d-flex mx-auto">
             <img src="assets/images/baby-shark.png" class="mx-auto my-auto img-control">
           </div>
-          <span class="text-desc mx-auto">
-            Apart from Digital Marketing Services, Hooop is also an official authorized licenser of Baby Shark in
-            Thailand.
+          <span class="text-desc mx-auto" [innerHtml]="'HOME.section_1_2' | translate">
+           
           </span>
-
+          <button class="button-view-more mx-auto" (click)="clickBabyShark()">View more</button>
         </div>
       </div>
       <div class="section-1-right-control d-flex">
@@ -39,16 +37,24 @@
           <div class="img-circle-control d-flex mx-auto">
             <img src="assets/images/crypto-wealth.png" class="mx-auto my-auto img-control">
           </div>
-          <span class="text-desc mx-auto">
-            Additionally, we are working on “CryptoWealth”; the website that provides news and update of cryptocurrency.
+          <span class="text-desc mx-auto" [innerHtml]="'HOME.section_1_3' | translate">
+            
           </span>
-
+          <button class="button-view-more mx-auto" (click)="clickCryptoWealth()">View more</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section-2-control" id="section2">
+  <div class="section-1-mobile-control d-flex d-md-none">
+    <div class="d-flex flex-column">
+      <img src="assets/images/mobile/home/section-1-1.png" class="mx-auto img-control" (click)="clickMoreCreative()">
+      <img src="assets/images/mobile/home/section-1-2.png" class="mx-auto img-control" (click)="clickCryptoWealth()">
+      <img src="assets/images/mobile/home/section-1-3.png" class="mx-auto img-control" (click)="clickBabyShark()">
+    </div>
+  </div>
+
+  <div class="section-2-control d-none d-md-flex" id="section2">
 
     <div class="container d-flex flex-column">
 
@@ -92,7 +98,24 @@
 
   </div>
 
-  <div class="container section-3-control" id="section3">
+  <div class="section-2-mobile-control d-flex d-md-none">
+      <div class="container d-flex flex-column">
+        <div class="d-inline underline-mobile">
+          <span class="text-header-red">HOOOP <span class="text-header">Provides creative solutions for your
+              Business</span></span>
+        </div>
+        <div class="what-we-do-text d-flex flex-column">
+          <span class="what-text">WHAT <span class="we-do-text">WE DO</span></span>
+          <div class="grid-control">
+            <img src="assets/images/mobile/home/section-2-1.png" class="mx-auto img-control">
+            <img src="assets/images/mobile/home/section-2-2.png" class="mx-auto img-control">
+            <img src="assets/images/mobile/home/section-2-3.png" class="mx-auto img-control">
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="container container-control section-3-control" id="section3">
 
     <div class="d-flex flex-column">
       <span class="text-header-red">OUR <span class="text-header-white">SUCCESS</span></span>
@@ -112,7 +135,7 @@
   </div>
   <div class="section-4-control" id="section4" *ngIf="jsonOurSuccess">
     <div class="container container-control">
-      <div class="main-carousel overlap-control mx-auto">
+      <div class="main-carousel overlap-control mx-auto justify-content-center">
         <div class="carousel-cell ">
           <div class="carousel-grid-control">
             <div class="img-control" *ngFor="let img of jsonOurSuccess">
@@ -121,12 +144,21 @@
 
           </div>
         </div>
-
+      
+        
       </div>
     </div>
+   
+  </div>
+  <div class="container d-flex  d-none d-md-flex">
+    <button class="mx-auto button-more-creative text-center" (click)="clickMoreCreative()">MORE CREATIVE</button>
   </div>
   <div class="container section-5-control" id="section5">
     <div class="d-flex flex-column">
+      <div class="d-flex d-md-none">
+        <youtube-player videoId="mzomUhNCWoA" class="my-auto mx-auto w-100" (click)="clickYoutube()"></youtube-player>
+      </div>
+      
       <span class="text-header-red">OUR <span class="text-header-white">ARTICLES</span></span>
 
       <div class="grid-control my-auto">
@@ -146,14 +178,14 @@
           </div>
          
         </div>
-        <div class="grid-right-control d-flex">
-          <youtube-player videoId="mzomUhNCWoA" class="my-auto mx-auto" (click)="clickYoutube()"></youtube-player>
+        <div class="grid-right-control d-none d-md-flex">
+          <youtube-player videoId="mzomUhNCWoA" class="my-auto mx-auto w-100" (click)="clickYoutube()"></youtube-player>
         </div>
       </div>
     </div>
   </div>
-  <div class="section-6-control" id="section6">
-    <div class="container d-flex flex-column">
+  <div class="section-6-control  d-none d-md-flex" id="section6">
+    <!-- <div class="container d-flex flex-column">
 
       <div class="grid-control">
         <div class="d-flex flex-column grid-left-control">
@@ -174,7 +206,11 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
+    <img src="assets/images/mobile/home/section-6-1.png" class="img-control">
+  </div>
+  <div class="section-6-mobile-control d-flex d-md-none">
+    <img src="assets/images/mobile/home/section-6-1.png" class="img-control">
   </div>
   <div class="section-7-control" id="section7" *ngIf="jsonOurClient">
     <div class="container  d-flex flex-column">

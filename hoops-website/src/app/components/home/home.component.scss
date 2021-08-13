@@ -6,12 +6,44 @@
 
 app-home {
 
-  .bg-default{
-    background-color: $secondary-color;
+  .container-control{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
-  .carousel-cell{
+
+  .bg-default {
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: $secondary-color;
+
+  }
+
+  .carousel-cell {
     left: 0px !important;
     right: 0px !important;
+  }
+
+  .button-view-more {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    width: 150px;
+    border-radius: 8px;
+    color: white;
+    z-index: 1;
+    margin-top: 12px;
+  }
+
+  .button-more-creative {
+    margin-top: 120px;
+    background-color: white !important;
+    border: 1px solid #ffffff;
+    width: auto;
+    font-size: 25px;
+    font-family: "Bold";
+    padding: 8px 30px;
+    border-radius: 8px;
+    color: $primary-color;
+    z-index: 1;
   }
 
   .bg-header-control {
@@ -21,9 +53,9 @@ app-home {
     background-color: $primary-color;
     min-height: 1000px;
 
+
     .container-control {
       margin-top: 17%;
-      ;
     }
 
     .logo-big-img {
@@ -56,12 +88,39 @@ app-home {
       font-family: "Medium";
     }
   }
+  .img-control {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .section-1-mobile-control {
+    min-height: 500px;
+    background: url('../../../assets/images/bg_home2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+
+  }
+
 
   .section-1-control {
     z-index: 1;
-    padding-left: 0px;
+    padding-left: 0px !important;
     position: relative;
-    padding-right: 0px;
+    padding-right: 0px !important;
+    display: flex;
+    flex-direction: row;
+
+    .img-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
 
     .absolute-control {
       margin-top: 40px;
@@ -89,8 +148,6 @@ app-home {
 
       }
 
-
-
       .header-control {
         padding: 8px 14px;
         height: auto;
@@ -99,12 +156,17 @@ app-home {
         background-color: white;
         border-radius: 28px;
         z-index: 1;
+        margin-left: 16px;
+        margin-right: 16px;
 
         .text-header-red {
           color: $primary-color;
           font-size: 40px;
           font-family: "Medium";
           line-height: 1.5em;
+          @include media-breakpoint-down(md){
+            font-size: 50px;
+          }
         }
 
         .text-header {
@@ -112,18 +174,23 @@ app-home {
           font-size: 40px;
           font-family: "Medium";
           line-height: 1.5em;
+          @include media-breakpoint-down(md){
+            font-size: 50px;
+          }
         }
+      }
+
+      @include media-breakpoint-down(md) {
+        position: relative;
       }
     }
 
     .section-1-grid-control {
       display: grid;
       min-height: 900px;
-
       grid-template-columns: 50% 50%;
 
       .section-1-left-control {
-        background-color: $secondary-color;
         height: 100%;
         padding-bottom: 15%;
 
@@ -156,9 +223,7 @@ app-home {
       .section-1-right-control {
         z-index: 0;
         padding-bottom: 15%;
-        background: transparent url('../../../assets/images/home-sec-1-bg-right.png') 0% 0% no-repeat padding-box;
-        mix-blend-mode: multiply;
-        height: 100%;
+
         opacity: 1;
 
         .img-circle-control {
@@ -190,6 +255,97 @@ app-home {
         }
       }
     }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  .section-2-mobile-control {
+    min-height: 500px;
+    background: url('../../../assets/images/mobile/home/bg-section-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .underline-mobile {
+      border-bottom-style: solid;
+      border-bottom-width: 3px;
+      border-bottom-color: black;
+      padding-bottom: 8px;
+    }
+    .what-we-do-text {
+
+      .what-text {
+        font-size: 50px;
+        font-family: "Bold";
+        color: black;
+      }
+
+      .we-do-text {
+        font-size: 70px;
+        color: $primary-color;
+        font-family: "Bold";
+      }
+
+      .grid-control {
+        display: grid;
+        grid-template-columns: 100%;
+
+        .grid-column {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+
+          .red-header-control {
+            border-top-left-radius: 10px;
+            background-color: $primary-color;
+            border-top-right-radius: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            padding-bottom: 8px;
+            padding-top: 8px;
+
+            .red-header-text {
+              font-size: 60px;
+              line-height: 60px;
+              line-height: 1.2em;
+              color: white;
+              text-align: center;
+              font-family: "Medium";
+            }
+          }
+
+          .white-border-control {
+            background-color: white;
+            border-radius: 10px;
+            min-height: 500px;
+            width: 100%;
+            padding: 18px;
+
+            .img-white-border {
+              border-radius: 18px;
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+            }
+
+            .text-desc {
+              padding-top: 30px;
+              padding-bottom: 30px;
+              font-size: 24px;
+              text-align: center;
+              font-family: "Medium";
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
   }
 
   .section-2-control {
@@ -198,9 +354,7 @@ app-home {
     background-size: cover;
     min-height: 500px;
     padding-bottom: 40px;
-    padding-top: 40px;
-
-
+    padding-top: 20px;
 
     .underline {
       border-bottom-style: solid;
@@ -269,7 +423,7 @@ app-home {
               object-fit: contain;
             }
 
-            .text-desc{
+            .text-desc {
               padding-top: 30px;
               padding-bottom: 30px;
               font-size: 24px;
@@ -287,12 +441,21 @@ app-home {
     font-size: 60px;
     color: $primary-color;
     font-family: "Bold";
+
+    @include media-breakpoint-down(md){
+      font-size: 35px;
+      line-height: 1.2em;
+    }
   }
 
   .text-header {
     font-size: 45px;
     color: black;
     font-family: "Medium";
+    @include media-breakpoint-down(md){
+      font-size: 35px;
+      line-height: 1.2em;
+    }
   }
 
   .container-control {
@@ -311,18 +474,26 @@ app-home {
       font-size: $header-menu-size;
       color: $primary-color;
       font-family: "Bold";
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+        line-height: 1.2em;
+      }
     }
 
     .text-header-white {
       font-size: $header-menu-size;
       color: white;
       font-family: "Medium";
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+        line-height: 1.2em;
+      }
     }
 
     .grid-control {
       width: 70%;
       display: grid;
-      grid-template-columns: 50% 50% ;
+      grid-template-columns: 50% 50%;
 
       .grid-column-control {
         margin-left: auto;
@@ -333,14 +504,27 @@ app-home {
           color: white;
           line-height: 140px;
           border-bottom: 3px solid white;
+
+          @include media-breakpoint-down(md){
+            font-size: 130px;
+            line-height: 100px;
+          }
         }
 
         .desc-text {
           margin-top: 10px;
           font-size: 100px;
           color: white;
+          @include media-breakpoint-down(md){
+            font-size: 40px;
+          }
         }
       }
+    }
+
+    @include media-breakpoint-down(md){
+      min-height: auto;
+      padding-bottom: 30px;
     }
   }
 
@@ -354,10 +538,8 @@ app-home {
       margin-top: -100px;
       margin-bottom: -100px;
     }
-    .container-control{
-      padding-left: 0px;
-      padding-right: 0px;
-    }
+
+    
 
     .carousel-grid-control {
       display: grid;
@@ -368,16 +550,36 @@ app-home {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
+        
+        @include media-breakpoint-down(md){
+          display: flex;
+        }
       }
 
       .img-customer {
         width: 200px;
         height: 200px;
         object-fit: contain;
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(xl){
           width: 150px;
           height: 150px;
         }
+
+        @include media-breakpoint-down(lg){
+          width: 150px;
+          height: 150px;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 150px;
+          height: 150px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      @include media-breakpoint-down(md){
+        grid-template-columns: 50% 50%;
       }
     }
   }
@@ -389,18 +591,26 @@ app-home {
     padding-bottom: 40px;
     width: 100%;
 
-   
+
 
     .text-header-red {
       font-size: $header-menu-size;
       color: $primary-color;
       font-family: "Bold";
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+        line-height: 1.2em;
+      }
     }
 
     .text-header-white {
       font-size: $header-menu-size;
       color: white;
       font-family: "Medium";
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+        line-height: 1.2em;
+      }
     }
 
     .grid-control {
@@ -432,8 +642,20 @@ app-home {
         }
       }
 
-      .grid-right-control {}
+      @include media-breakpoint-down(md){
+        grid-template-columns: 100%;
+      }
     }
+
+    @include media-breakpoint-down(md){
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+
+  iframe{
+    width: 100% !important;
   }
 
   .section-6-control {
@@ -457,6 +679,7 @@ app-home {
 
       .grid-right-control {
         padding: 24px;
+
         .img-right {
           width: 350px;
           height: auto;
@@ -464,8 +687,9 @@ app-home {
           object-fit: contain;
         }
 
-        .grid-border-control{
-         position: relative;
+        .grid-border-control {
+          position: relative;
+
           .border-control {
             background: #FFFFFF70 0% 0% no-repeat padding-box;
             border-radius: 25px;
@@ -473,13 +697,14 @@ app-home {
             padding: 18px 150px 18px 18px;
             text-align: center;
 
-            .text-desc{
+            .text-desc {
               font-size: 40px;
               color: black;
               font-family: "Medium";
               line-height: 1.2em;
             }
-            .img-grid{
+
+            .img-grid {
               position: absolute;
               width: auto;
               height: 250px;
@@ -488,38 +713,44 @@ app-home {
             }
           }
 
-         
+
         }
 
-       
+
       }
     }
   }
 
-  .section-7-control{
+  .section-7-control {
     background-color: #F3F3F3;
     min-height: 400px;
 
-    .container-control{
+    .container-control {
       padding-bottom: 100px;
     }
-   
+
     .text-header-red {
       font-size: $header-menu-size;
       color: $primary-color;
       font-family: "Bold";
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+      }
     }
 
     .text-header-secondary {
       font-size: $header-menu-size;
       color: $secondary-color;
       font-family: "Medium";
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+      }
     }
 
-    .carousel-grid-control{
+    .carousel-grid-control {
 
-      
-      .img-client{
+
+      .img-client {
         border-radius: 10px;
         border-style: solid;
         border-color: #0E7EB2;

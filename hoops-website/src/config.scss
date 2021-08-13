@@ -13,3 +13,7 @@ $pink-shark: #FE77B7;
 $header-menu-size: 80px;
 $sub-header: 60px;
 $text-description-size: 26px;
+
+@include media-breakpoint-down(md){
+    $header-menu-size: 40px;
+}

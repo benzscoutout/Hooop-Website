@@ -34,6 +34,12 @@ app-footer {
     height: auto;
     object-fit: contain;
     margin-left: auto;
+
+    @include media-breakpoint-down(md){
+      margin-left: 0;
+      margin-top: 30px;
+      width: 150px;
+    }
   }
 
 
@@ -71,6 +77,9 @@ app-footer {
         font-size: 50px;
         color: white;
         font-family: "Medium";
+        @include media-breakpoint-down(md){
+          margin-top: 0px;
+        }
       }
       .text-address {
         margin-top: 8px;
@@ -92,6 +101,11 @@ app-footer {
           height: auto;
           margin-left: auto;
           object-fit: contain;
+
+          @include media-breakpoint-down(md){
+            width: 70%;
+            margin-left: 0;
+          }
         }
 
         .img-social {
@@ -102,6 +116,10 @@ app-footer {
           cursor: pointer;
           height: 40px;
           object-fit: contain;
+          @include media-breakpoint-down(md){
+            width: 25px;
+            height: 25px;
+          }
         }
 
         .text-contact-control {
@@ -112,6 +130,12 @@ app-footer {
             width: 50px;
             height: 50px;
             object-fit: contain;
+            @include media-breakpoint-down(md){
+              width: 25px;
+              height: 25px;
+              margin-top: auto;
+              margin-bottom: auto;
+            }
           }
 
           .text-contact {
@@ -122,6 +146,10 @@ app-footer {
             text-decoration: none;
           }
 
+        }
+
+        @include media-breakpoint-down(md){
+          grid-template-columns: 100%;
         }
       }
     }

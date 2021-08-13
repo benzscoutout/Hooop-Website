@@ -54,4 +54,10 @@ export class BabySharkComponent implements OnInit {
     window.open("https://gqsize.com/", '_blank');
   }
 
+  clickBePartnership(){
+    
+    this.ga.setEvent('LICENSING BABYSHARK', { 'click': 'Goto Contact Form00' })
+    window.open("https://forms.gle/zU7RNznPGJXjapkH9", '_blank');
+  }
+
 }

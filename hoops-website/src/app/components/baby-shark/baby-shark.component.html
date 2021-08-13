@@ -15,7 +15,20 @@
       </div>
     </div>
 
-    <img src="assets/images/baby-shark/about-baby-shark.png" class="img-2 mx-auto">
+    <img src="assets/images/baby-shark/about-baby-shark.png" class="img-2 mx-auto d-none d-md-block">
+
+    <div class="d-flex d-md-none flex-column justify-content-center">
+      <img src="assets/images/mobile/baby-shark/circle-baby-shark.png" class="circle-baby-shark mx-auto">
+      <div class="background-desc-white d-flex flex-column">
+        <span class="text-red">HOOOP is a Pinkfong Baby Shark’s official authorized licensing agent in Thailand.</span>
+        <span class="text-black">Pinkfong is a global entertainment brand that creates award-winning kids’ content for
+          families around the world. The brand’s flagship IP “Pinkfong Baby Shark” became a breakout sensation when it
+          was launched on Pinkfong’s YouTube channel in November 2015. “Pinkfong Baby Shark” took the world by storm
+          amassing 88 billion views as of June 2021 becoming the No.1 most viewed YouTube video, while reaching the
+          world’s first RIAA certified diamond status as a children’s single for surpassing 10 million unit sales in the
+          US.</span>
+      </div>
+    </div>
 
     <div class="stat-control">
       <div class="number-control mx-auto">
@@ -63,7 +76,7 @@
         </div>
       </div>
 
-      <div class="channel-control d-flex flex-column">
+      <div class="channel-control d-none d-md-flex flex-column">
 
         <img src="assets/images/baby-shark/youtube-baby-shark.png" class="img-youtube" (click)="clickYoutube()">
         <img src="assets/images/baby-shark/facebook-baby-shark.png" class="img-facebook" (click)="clickFacebook()">
@@ -90,7 +103,7 @@
 
         </div>
       </div>
-      <button class="mx-auto button-be-partnership">Be a partnership</button>
+      <button class="mx-auto button-be-partnership" (click)="clickBePartnership()">Be a partnership</button>
     </div>
   </div>
 

@@ -44,13 +44,12 @@ body {
   font-family: "Regular" !important;
   min-height: 100vh;
   height: 100%;
-  min-width: 1440px !important;
   margin: 0 !important;
 }
 
-.container-md, .container-sm, .container{
-  min-width: 1280px !important;
-}
+// .container-md, .container-sm, .container{
+//   min-width: 1280px !important;
+// }
 
 .container-control{
     padding-left: 5%;

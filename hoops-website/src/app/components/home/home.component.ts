@@ -5,6 +5,7 @@ import { GoogleAnalyticsService } from 'src/app/service/google-analytic.service'
 import { ViewportScroller } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -16,11 +17,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   apiLoaded = false;
   jsonOurSuccess;
   jsonOurClient;
-  constructor(private ga: GoogleAnalyticsService, private scroller: ViewportScroller, private httpClient: HttpClient, private route: Router) { }
+  constructor(
+    private translateService: TranslateService,
+    private ga: GoogleAnalyticsService, private scroller: ViewportScroller, private httpClient: HttpClient, private route: Router) { }
 
   ngOnInit(): void {
 
-    
     this.ga.setPageView('Home', 'Landing');
     if (!this.apiLoaded) {
       // This code loads the IFrame Player API code asynchronously, according to the instructions at
@@ -48,6 +50,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
   
    
 
+  }
+
+  clickCryptoWealth(){
+    this.ga.setEvent('Home Page', { 'click': 'click CryptoWealth' })
+    this.route.navigate(['/cryptowealth']);
+  }
+
+  clickBabyShark(){
+    this.ga.setEvent('Home Page', { 'click': 'click Baby Shark' })
+    this.route.navigate(['/baby-shark']);
+  }
+
+  clickMoreCreative(){
+    this.ga.setEvent('Home Page', { 'click': 'click More Creative' })
+    this.route.navigate(['/our-service']);
   }
 
   clickYoutube() {

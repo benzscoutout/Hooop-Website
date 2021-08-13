@@ -29,6 +29,15 @@ app-our-service {
         margin-bottom: 0px !important;
         font-family: "Bold";
         color: $secondary-color;
+
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
@@ -39,12 +48,25 @@ app-our-service {
         font-size: $header-menu-size;
         color: $primary-color;
         font-family: "Bold";
+
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+        }
       }
 
       .text-header-white {
         font-size: $header-menu-size;
         color: white;
         font-family: "Medium";
+
+        @include media-breakpoint-down(md) {
+          font-size: 25px;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
@@ -76,6 +98,15 @@ app-our-service {
       background-color: #ffffff53;
       width: 100%;
       height: 143px;
+
+      @include media-breakpoint-down(md) {
+        height: 40px;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      height: auto;
+      margin-top: 24px;
     }
 
   }
@@ -83,12 +114,48 @@ app-our-service {
   .section-3-control {
     .main-carousel {
       height: 300px;
+
+      @include media-breakpoint-down(md){
+        height: auto;
+      }
     }
 
     .carousel-cell-control {
       margin-top: 70px;
       width: 100%;
 
+    }
+
+    .carousel-cell-mobile-control {
+      margin-top: 30px;
+      width: 100%;
+
+      .border-red-control {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        height: auto;
+        background-color: $primary-color;
+        padding: 8px;
+
+        .text-header-white {
+          font-size: 23px;
+          color: white;
+          text-align: center;
+          font-family: "Medium";
+        }
+      }
+      .border-white-control {
+        position: relative;
+        width: 80%;
+        z-index: 1;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        background-color: white;
+        padding: 15px;
+      }
     }
 
     .border-red-control {
@@ -111,6 +178,8 @@ app-our-service {
         text-align: center;
         font-family: "Medium";
       }
+
+
     }
 
     .border-white-control {
@@ -178,7 +247,7 @@ app-our-service {
     }
 
     .grid-control {
-    
+
       position: relative;
       display: grid;
       grid-template-columns: 50% 50%;
@@ -205,12 +274,14 @@ app-our-service {
   .section-5-control {
     padding-top: 30px;
     padding-bottom: 30px;
-    .youtube-frame{
+
+    .youtube-frame {
       width: 300px;
       height: 300px;
     }
+
     .grid-control {
-        margin-top: 16px;
+      margin-top: 16px;
       display: grid;
       grid-template-columns: 20% 80%;
       column-gap: 8px;
@@ -218,7 +289,7 @@ app-our-service {
       .border-left-control {
         padding: 16px;
         width: 100%;
-     
+
         margin-top: 8px;
         border: 4px solid #FFFFFF;
         border-radius: 14px;
@@ -227,12 +298,23 @@ app-our-service {
           width: 150px;
           height: 150px;
           object-fit: contain;
+          @include media-breakpoint-down(md){
+            width: 70px;
+            height: 70px;
+          }
         }
 
         .text-desc {
           font-size: $text-description-size;
           color: white;
           font-family: "Medium";
+          @include media-breakpoint-down(md){
+            text-align: center;
+            line-height: 1.2em;
+          }
+        }
+        @include media-breakpoint-down(md){
+          width: 40%;
         }
       }
 
@@ -243,67 +325,96 @@ app-our-service {
         padding: 16px;
         border: 4px solid #FFFFFF;
         border-radius: 14px;
-       
-        .background-border-right{
-            background-color: #EAF2FA;
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            border-radius: 14px;
-            padding: 16px;
-            height: 100%;
-            column-gap: 8px;
-            row-gap: 8px;
 
-            .img-port{
-                width: 80%;
-                height: auto;
-                object-fit: contain;
-            }
-        }
-        .background-border-right-ppc{
-            background-color: #EAF2FA;
-            display: grid;
-            grid-template-columns: 100%;
-            border-radius: 14px;
-            padding: 16px;
-            height: 100%;
-            column-gap: 8px;
-            row-gap: 8px;
+        .background-border-right {
+          background-color: #EAF2FA;
+          display: grid;
+          grid-template-columns: 25% 25% 25% 25%;
+          border-radius: 14px;
+          padding: 16px;
+          height: 100%;
+          column-gap: 8px;
+          row-gap: 8px;
 
-            .img-port{
-                width: 80%;
-                height: auto;
-                object-fit: contain;
+          .img-port {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            @include media-breakpoint-down(md){
+              margin-left: auto;
+              margin-right: auto;
             }
+          }
+          @include media-breakpoint-down(md){
+            grid-template-columns: 50% 50%;
+            min-height: auto;
+          }
         }
+
+        .background-border-right-ppc {
+          background-color: #EAF2FA;
+          display: grid;
+          grid-template-columns: 100%;
+          border-radius: 14px;
+          padding: 16px;
+          height: 100%;
+          column-gap: 8px;
+          row-gap: 8px;
+
+          .img-port {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            @include media-breakpoint-down(md){
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        }
+
+        @include media-breakpoint-down(md){
+          border-style: none;
+        }
+      }
+
+      @include media-breakpoint-down(md){
+        grid-template-columns: 100%;
       }
     }
   }
 
-  .seciton-6-control{
+  .seciton-6-control {
     background-color: #F3F3F3;
     min-height: 300px;
     padding-top: 30px;
     padding-bottom: 30px;
 
-    .text-control{
+    .text-control {
       border-bottom-color: $secondary-color;
       border-bottom-width: 3px;
       border-bottom-style: solid;
     }
-    .text-head-red{
+
+    .text-head-red {
       font-size: $header-menu-size;
       color: $primary-color;
       font-family: "Bold";
+
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+      }
     }
 
-    .text-head-blue{
+    .text-head-blue {
       font-size: $header-menu-size;
       color: $secondary-color;
       font-family: "Bold";
+      @include media-breakpoint-down(md){
+        font-size: 50px;
+      }
     }
 
-    .img-all{
+    .img-all {
       width: 100%;
       height: auto;
       object-fit: contain;

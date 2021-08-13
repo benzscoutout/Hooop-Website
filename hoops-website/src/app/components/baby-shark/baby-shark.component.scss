@@ -44,6 +44,14 @@ app-baby-shark {
       min-width: 200px;
       border-top-right-radius: 22px;
       border-bottom-right-radius: 22px;
+
+      @include media-breakpoint-down(md){
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 22px;
+        height: auto;
+        width: auto;
+      }
     }
 
     .img-2 {
@@ -56,11 +64,19 @@ app-baby-shark {
     .text-size {
       font-size: 50px;
       font-family: "Regular";
+      @include media-breakpoint-down(md){
+        font-size: 30px;
+        text-align: center;
+      }
     }
 
     .stat-control {
       display: grid;
       grid-template-columns: 60% 40%;
+
+      @include media-breakpoint-down(md){
+        grid-template-columns: 100%;
+      }
     }
 
     .number-control {
@@ -83,6 +99,9 @@ app-baby-shark {
           font-size: 40px;
           font-family: "Bold";
           color: $pink-shark;
+          @include media-breakpoint-down(md){
+            font-size: 30px;
+          }
         }
 
         .number-desc {
@@ -90,6 +109,11 @@ app-baby-shark {
           font-family: "Regular";
           color: $text-black;
           margin-top: -20px;
+          @include media-breakpoint-down(md){
+            margin-top: 0px;
+            text-align: center;
+            line-height: 1.2em;
+          }
         }
 
         .grid-row-1-control {
@@ -136,6 +160,7 @@ app-baby-shark {
             position: relative;
 
           }
+          
 
         }
 
@@ -148,6 +173,10 @@ app-baby-shark {
           color: white;
           font-family: "Bold";
           font-size: 20px;
+
+          @include media-breakpoint-down(md){
+            margin-top: 30px;
+          }
         }
 
         .text-pinkfong {
@@ -183,6 +212,9 @@ app-baby-shark {
           height: 50px;
           object-fit: contain;
           margin-right: 8px;
+          @include media-breakpoint-down(md){
+            height: 35px;
+          }
         }
 
         .youtube-right-img {
@@ -190,7 +222,14 @@ app-baby-shark {
           height: 50px;
           object-fit: contain;
           margin-left: 8px;
+          @include media-breakpoint-down(md){
+            height: 35px;
+          }
         }
+      }
+
+      @include media-breakpoint-down(md){
+        width: 95%;
       }
     }
 
@@ -250,6 +289,18 @@ app-baby-shark {
           height: 150px;
           object-fit: contain;
         }
+
+        @include media-breakpoint-down(md){
+          width: 60%;
+          margin-left: auto;
+          margin-right: auto;
+          height: auto;
+          margin-bottom: 15px;
+        }
+      }
+
+      @include media-breakpoint-down(md){
+        grid-template-columns: 100%;
       }
     }
 
@@ -264,6 +315,45 @@ app-baby-shark {
       color: white;
       font-family: "Bold";
       font-size: 36px;
+
+      @include media-breakpoint-down(md){
+        margin-top: 30px;
+      }
+    }
+
+    @include media-breakpoint-down(md){
+      grid-template-columns: 100%;
+    }
+  }
+
+  .circle-baby-shark{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .background-desc-white{
+    border-radius: 8px;
+    background-color: white;
+    padding: 16px;
+    width: 80%;
+    margin-left: auto;
+    margin-bottom: 30px;
+    margin-right: auto;
+
+    .text-red{
+      color: $primary-color;
+      font-size: 26px;
+      line-height: 1.2em;
+      font-family: "Medium";
+      text-align: center;
+    }
+    .text-black{
+      color: $text-black;
+      font-size: 22px;
+      line-height: 1.2em;
+      font-family: "Regular";
+      text-align: center;
     }
   }
 }

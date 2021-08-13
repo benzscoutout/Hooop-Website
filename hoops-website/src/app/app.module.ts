@@ -15,6 +15,14 @@ import { ArticleFirstComponent } from './components/articles/article-first/artic
 import { ArticleSecondComponent } from './components/articles/article-second/article-second.component';
 import { ArticleThirdComponent } from './components/articles/article-third/article-third.component';
 import { BabySharkComponent } from './components/baby-shark/baby-shark.component';
+import { from, Observable } from 'rxjs';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+
+export class WebpackTranslateLoader implements TranslateLoader {
+  getTranslation(lang: string): Observable<any> {
+    return from(import(`../assets/i18n/${lang}.json`));
+  }
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +38,12 @@ import { BabySharkComponent } from './components/baby-shark/baby-shark.component
     BabySharkComponent
   ],
   imports: [
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useClass: WebpackTranslateLoader
+      }
+    }),
     BrowserModule,
     AppRoutingModule,
     YouTubePlayerModule,

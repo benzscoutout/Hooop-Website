@@ -21,19 +21,30 @@
   </div>
   <div class="container section-3-control">
     <div class="main-carousel">
-      <div class="d-inline-flex carousel-cell-control" *ngFor="let img of imgArray">
-        <div class="border-white-control mx-auto d-flex">
+      <div class="carousel-cell-control" *ngFor="let img of imgArray">
+        <div class="d-none d-md-inline-flex ">
+          <div class="border-white-control mx-auto d-flex">
+            <div class="border-red-control d-flex">
+              <span class="text-header-white mx-auto">{{img.title}}</span>
+            </div>
+            <span class="text-desc mx-auto">{{img.desc}}</span>
+          </div>
+          <img src="assets/images/arrow-right.png" class="arrow-right my-auto">
+          <div class="contact-control d-flex flex-column">
+            <img src="assets/images/contact-circle.png" class="contact-img my-auto">
+            <span class="mx-auto contact-desc">Contact</span>
+          </div>
+        </div>
+        <div class="d-flex d-md-none carousel-cell-mobile-control flex-column">
           <div class="border-red-control d-flex">
             <span class="text-header-white mx-auto">{{img.title}}</span>
           </div>
-          <span class="text-desc mx-auto">{{img.desc}}</span>
-        </div>
-        <img src="assets/images/arrow-right.png" class="arrow-right my-auto">
-        <div class="contact-control d-flex flex-column">
-          <img src="assets/images/contact-circle.png" class="contact-img my-auto">
-          <span class="mx-auto contact-desc">Contact</span>
+          <div class="border-white-control">
+            <span class="text-desc mx-auto">{{img.desc}}</span>
+          </div>
         </div>
       </div>
+    
     </div>
   </div>
   <div class="container section-4-control" id="our-services">
@@ -46,7 +57,7 @@
       </div>
     </div>
   </div>
-  <div class="container section-5-control" >
+  <div class="container section-5-control">
     <div class="grid-control" id="campaign-management">
       <div class="d-flex mb-auto">
         <div class="border-left-control d-flex flex-column mx-auto">
@@ -75,8 +86,8 @@
       <div class="d-flex flex-column">
         <div class="border-right-control mx-auto d-flex">
           <div class="background-border-right mx-auto">
-            <ng-container *ngFor="let img of counter(16); let i = index;">
-              <img src="assets/images/our-service/graphic-design/img-{{i+1}}.png" class="img-port my-auto">
+            <ng-container *ngFor="let img of counter(30); let i = index;">
+              <img src="assets/images/our-service/graphic-design/{{i+1}}.jpg" class="img-port my-auto">
             </ng-container>
 
           </div>
@@ -123,7 +134,7 @@
 
       </div>
     </div>
-    <div class="grid-control"  id="ppc-service">
+    <div class="grid-control" id="ppc-service">
       <div class="d-flex mb-auto">
         <div class="border-left-control d-flex flex-column mx-auto">
           <img src="assets/images/our-service-section-4-ppc.png" class="img-icon mx-auto">

@@ -12,6 +12,10 @@ app-cryptowealth {
         background-size: cover;
         background-color: $secondary-color;
         min-height: 300px;
+
+        @include media-breakpoint-down(md){
+            background-position-x: -500px;
+        }
     }
 
     .container-padding-control{
@@ -23,12 +27,21 @@ app-cryptowealth {
         color: white;
         font-size: $header-menu-size;
         font-family: "Bold";
+
+        @include media-breakpoint-down(md){
+            font-size: 50px;
+            text-align: center;
+        }
     }
 
     .text-sub-header-white{
         color: white;
         font-size: $sub-header;
         font-family: "Regular";
+        @include media-breakpoint-down(md){
+            font-size: 30px;
+            text-align: center;
+        }
     }
 
     .grid-control{
@@ -42,6 +55,12 @@ app-cryptowealth {
             height: 283px;
             border-radius: 141.5px;
             background-color: white;;
+            @include media-breakpoint-down(md){
+                width: 150px;
+                height: 150px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         .img-logo-crypto{
@@ -57,12 +76,23 @@ app-cryptowealth {
             padding-right: 8px;
             line-height: 1.2em;
             font-family: "Regular";
+
+            @include media-breakpoint-down(md){
+                margin-top: 15px;
+                font-size: 30px;
+                text-align: center;
+            }
         }
 
         .img-icon{
             width: 100%;
             height: auto;
             object-fit: contain;
+            @include media-breakpoint-down(md){
+                width: 200px;
+                margin-top: 50px !important;
+                height: auto;
+            }
         }
 
         .button-crypto{
@@ -75,6 +105,16 @@ app-cryptowealth {
             color: white;
             font-size: 36px;
             font-family: "Medium";
+
+            @include media-breakpoint-down(md){
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 24px;
+            }
+        }
+
+        @include media-breakpoint-down(md){
+            grid-template-columns: 100%;
         }
     }
 }

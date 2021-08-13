@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,10 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'hoops-website';
   isShow = true;
-  constructor(private route: Router){
-
+  constructor(private route: Router,private translate: TranslateService){
+    this.translate.addLangs(['en', 'th']);
+    this.translate.setDefaultLang('en');
+    this.translate.use(this.translate.getDefaultLang());
   }
 
   ngOnInit(){
